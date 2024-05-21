@@ -13,6 +13,9 @@
     <link href="css/site.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/rubiks-cube-solver@1.2.0/lib/index.common.min.js
+    "></script>
    <!-- Convert this to an external style sheet -->
    <style>
    </style>
@@ -48,12 +51,56 @@
             </div>
         </div>
     </nav>
-    <!-- ==== Main Section === -->
-    <main class="flex-shrink-0">
-        <div class="container">
-
+<!-- ==== Main Section === -->
+<main class="flex-shrink-0">
+    <div class="container">    
+        <h1>Enter Your Cube State</h1>
+        <div id="cube-container">
+            <div class="face-container">
+                <label for="up-face">Up</label>
+                <div id="up-face" class="cube-face"></div>
+            </div>
+            <div id="middle-row">
+                <div class="face-container">
+                    <label for="left-face">Left</label>
+                    <div id="left-face" class="cube-face"></div>
+                </div>
+                <div class="face-container">
+                    <label for="front-face">Front</label>
+                    <div id="front-face" class="cube-face"></div>
+                </div>
+                <div class="face-container">
+                    <label for="right-face">Right</label>
+                    <div id="right-face" class="cube-face"></div>
+                </div>
+                <div class="face-container">
+                    <label for="back-face">Back</label>
+                    <div id="back-face" class="cube-face"></div>
+                </div>
+            </div>
+            <div class="face-container">
+                <label for="down-face">Down</label>
+                <div id="down-face" class="cube-face"></div>
+            </div>
         </div>
-    </main>
+        <div class="color-palette">
+            <div id="color-white" class="color-block" style="background-color: white;"></div>
+            <div id="color-yellow" class="color-block" style="background-color: yellow;"></div>
+            <div id="color-red" class="color-block" style="background-color: red;"></div>
+            <div id="color-orange" class="color-block" style="background-color: orange;"></div>
+            <div id="color-blue" class="color-block" style="background-color: blue;"></div>
+            <div id="color-green" class="color-block" style="background-color: green;"></div>
+        </div>
+        <button onclick="solveCube()">Solve Cube</button>
+        <button onclick="scrambleCube()">Scramble Cube</button>
+        <p id="solution"></p>
+        
+    </div>
+</main>
+
+
+    
+    
     <!-- ==== Footer Section === -->
     <footer class="footer mt-auto py-3">
         <div class="container-fluid">

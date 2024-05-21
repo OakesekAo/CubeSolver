@@ -1,61 +1,86 @@
-:root{
-    --primary-color: #4CA1AF;
-    --secondary-color: #995e06;
-    --dark-color: #2C3E50;
-    --white-color: #f1f3ed;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    color: var(--dark-color);
+h1 {
+    margin-top: 20px;
 }
 
-nav{
-    background-color:var(--dark-color);
+#cube-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
-footer{
-    background-color:var(--dark-color);
-    padding-right: 1rem;
+#middle-row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    color:var(--primary-color);
+.cube-face {
+    display: grid;
+    grid-template-columns: repeat(3, 37.5px); /* Reduced size by 25% */
+    grid-gap: 5px;
+    margin: 5px;
 }
 
-footer .social>a{
-    color: var(--white-color);
-    opacity: .75;
+.cube-face div {
+    width: 37.5px; /* Reduced size by 25% */
+    height: 37.5px; /* Reduced size by 25% */
+    border: 1px solid #000;
 }
 
-footer .social>a:hover{
-    opacity: 0.9;
-    color: var(--secondary-color);
-}
-.bsicon{
-    color:purple;
-}
-.jsicon{
-    color:rgb(226,211,4);
-}
-.html5icon{
-    color:orangered;
-}
-.cssicon{
-    color: rgb(11,82,214)
-}
-.checklist >li i{
-    color: var(--secondary-color)
+.face-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
 }
 
-code[class*="language-"],
-    pre[class*="language-"] {
-        white-space: pre-wrap;
-        word-break: break-all;
-        word-wrap: break-word;
+.face-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-block {
+    width: 37.5px; /* Reduced size by 25% */
+    height: 37.5px; /* Reduced size by 25% */
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#solution {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .cube-face div {
+        width: 30px;
+        height: 30px;
     }
 
-main>.container {
-padding: 60px 15px 0;
+    .color-block {
+        width: 30px;
+        height: 30px;
+    }
 }
-
-
